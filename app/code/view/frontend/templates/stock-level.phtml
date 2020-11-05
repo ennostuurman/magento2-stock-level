@@ -1,0 +1,21 @@
+<?php
+declare(strict_types=1);
+/**
+ * @copyright Copyright (c) Spaarne Webdesign, Haarlem, The Netherlands
+ * @author Enno Stuurman <enno@spaarnewebdesign.nl>
+ */
+
+/** @var \Spaarne\StockLevel\Block\ProductListSimple|\Spaarne\StockLevel\Block\ProductViewSimple $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+<?php if ($block->isSimpleProduct()): ?>
+    <?php $stockLevel = $block->getStockLevelForSimple() ?>
+    <div data-js="stock-level" class="stock-level">
+        <div class="stock-level__text">
+            <?= $escaper->escapeHtml(__('Stock')) ?>: <?= $stockLevel ?>
+        </div>
+        <div class="stock-level__bar" aria-hidden="true">
+            <div class="stock-level-fill stock-level-fill--<?= $stockLevel ?>"></div>
+        </div>
+    </div>
+<?php endif; ?>

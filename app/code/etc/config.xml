@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright Copyright (c) Spaarne Webdesign, Haarlem, The Netherlands
+* @author Enno Stuurman <enno@spaarnewebdesign.nl>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <spaarne_stocklevel>
+                <stock_level_qty_moderate>50</stock_level_qty_moderate>
+                <stock_level_qty_high>100</stock_level_qty_high>
+            </spaarne_stocklevel>
+        </catalog>
+    </default>
+</config>

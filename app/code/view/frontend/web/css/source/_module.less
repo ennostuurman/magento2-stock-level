@@ -1,0 +1,81 @@
+// **
+// * @copyright Copyright (c) Spaarne Webdesign, Haarlem, The Netherlands
+// * @author Enno Stuurman <enno@spaarnewebdesign.nl>
+// */
+
+//
+// Variables
+// ______________________________________________
+
+@color-stock-level-low: lighten(@color-red9, 30%);
+@color-stock-level-moderate: lighten(@color-sky-blue1, 10%);
+@color-stock-level-high: lighten(@color-dark-green1, 40%, relative);
+
+//
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+    .stock-level {
+        display: flex;
+        flex-flow: column;
+        width: 90%;
+        max-width: 20rem;
+        padding: 6px 3px 9px 0;
+    }
+
+    .stock-level__text {
+        font-size: @font-size__xs;
+    }
+
+    .stock-level__bar {
+        display: flex;
+        width: 100%;
+        height: 2rem;
+        border: 1px solid @color-gray_light;
+    }
+
+    .stock-level-fill {
+        width: 0;
+
+        &&--low {
+            width: 25%;
+            background-color: @color-stock-level-low;
+        }
+
+        &&--moderate {
+            width: 55%;
+            background-color: @color-stock-level-moderate;
+        }
+
+        &&--high {
+            width: 85%; // never show 100% here, something with Persuasive Ecommerce, ask Guido X ...
+            background-color: @color-stock-level-high;
+        }
+    }
+}
+
+//
+//  Mobile only
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .stock-level {
+        width: 100%;
+        padding: 8px 0 10px;
+    }
+}
+
+//
+// Desktop only
+// ------------------------------------------------
+
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__s) {
+    .catalog-category-view { // dirty hack, avoiding !important to override vendor/magento/theme-frontend-luma/Magento_Catalog/web/css/source/module/_listing.less
+        .product-item-actions {
+            .actions-primary + .actions-secondary {
+                display: block; // make sure stock level on PLP is always below add-to-cart button because it's part of the addto container
+            }
+        }
+    }
+}

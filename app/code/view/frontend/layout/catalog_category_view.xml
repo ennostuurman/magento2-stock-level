@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright Copyright (c) Spaarne Webdesign, Haarlem, The Netherlands
+* @author Enno Stuurman <enno@spaarnewebdesign.nl>
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="category.product.addto">
+            <block class="Spaarne\StockLevel\Block\ProductListSimple"
+                   name="spaarne-stock-level-plp"
+                   template="Spaarne_StockLevel::stock-level.phtml"
+                   before="-"
+            />
+        </referenceBlock>
+    </body>
+</page>

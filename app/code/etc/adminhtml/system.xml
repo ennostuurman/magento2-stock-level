@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright Copyright (c) Spaarne Webdesign, Haarlem, The Netherlands
+* @author Enno Stuurman <enno@spaarnewebdesign.nl>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="catalog" translate="label, comment"  type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="spaarne_stocklevel" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Spaarne Stock Level</label>
+                <comment>Configure Stock Level Thresholds. Stock Levels labels shown are 'high, 'moderate' and 'low'.</comment>
+                <field id="stock_level_qty_moderate" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Stock Level Moderate Quantity</label>
+                    <comment>Stock quantity threshold to show 'moderate level' (below this quantity stock level label will be 'low', above this quantity 'moderate')</comment>
+                    <validate>validate-digits validate-zero-or-greater</validate>
+                </field>
+                <field id="stock_level_qty_high" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Stock Level High Quantity</label>
+                    <comment>Stock quantity threshold to show 'maximum level' (below this quantity stock level will be 'moderate', above stock level will be 'high')</comment>
+                    <validate>validate-digits validate-zero-or-greater</validate>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
