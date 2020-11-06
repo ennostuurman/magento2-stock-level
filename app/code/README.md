@@ -11,9 +11,12 @@ An educational Magento 2 module to show stock levels on the FE PLP, PDP and in t
 
 ## This lesson focuses on learning the following topics
 
-1. Retrieving salable stock quantity
+1. Magento 2 Inventory API
 2. Admin configuration
-3. Magento swatches FE JS functionality
+3. Magento 2 Interception pattern (plugins)
+4. Extending or overriding Magento JS with mixins
+5. JSON configuration 
+
 
 ## Prerequisites
 
@@ -25,7 +28,7 @@ An educational Magento 2 module to show stock levels on the FE PLP, PDP and in t
 
 This module has been made for personal learning purposes and is for educational purposes only. 
 So not suited for commercial re-use. Why? This module hasn't been tested for grouped and bundled products for example.
-And there's probably more. This was just a fun learning project. That's all.
+And there's probably more. This was just a fun learning project. That's all folks....
 
 ## Copyright
 
