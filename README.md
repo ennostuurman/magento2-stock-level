@@ -5,6 +5,12 @@ See https://github.com/ennostuurman/spaarne-stock-level/blob/master/app/code/REA
 
 # Screen prints
 
+## Product Detail Page (configurable product with swatches)
+
+
+![](https://github.com/ennostuurman/spaarne-stock-level/blob/master/spaarne-stock-level-pdp-swatches.gif?type=raw)
+
+
 ## Category page (configurable product with swatches)
 
 ![](https://github.com/ennostuurman/spaarne-stock-level/blob/master/spaarne-stock-level-plp-swatches.gif?type=raw)
